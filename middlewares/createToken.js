@@ -1,4 +1,3 @@
-import axios from 'axios'
 import unirest from 'unirest';
 
 
@@ -8,7 +7,7 @@ const createToken = async (req, res, next) => {
     const consumer = process.env.CONSUMER_KEY
     const auth = new Buffer.from(`${consumer}:${secret}`).toString("base64");
     const url_dev = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
-    
+
     unirest('GET', url_dev)
     .headers({ 'Authorization': `Basic ${auth}` })
     .send()

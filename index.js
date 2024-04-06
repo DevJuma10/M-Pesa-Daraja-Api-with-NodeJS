@@ -3,7 +3,6 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import bodyParser from 'body-parser';
 dotenv.config()
-import authRouter from './routes/auth.js'
 import createToken from './middlewares/createToken.js';
 
 const app = express();
@@ -21,8 +20,7 @@ app.get('/',  (req,res)=>{
     res.send('Safaricom Daraja Api Tinkering ')
 })
 
-// Mount the router at '/api'
-app.use('/auth', authRouter);
+
 
 // Start the server
 app.listen(PORT, () => {
