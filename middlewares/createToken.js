@@ -28,7 +28,7 @@ const createToken = async (req, res, next) => {
     //   });
 
     unirest('GET', url_dev)
-    .headers({ 'Athorization': `Basic ${auth}` })
+    .headers({ 'Authorization': `Basic ${auth}` })
     .send()
     .end(res => {
         if (res.error) throw new Error(res.error);
@@ -41,10 +41,10 @@ export default createToken;
 
 
 
- unirest('GET', authUrl)
-.headers({ 'Athorization': `Basic ${authTkn}` })
-.send()
-.end(res => {
-    if (res.error) throw new Error(res.error);
-    console.log(res.raw_body);
-});
+
+
+// .send()
+// .end(res => {
+//     if (res.error) throw new Error(res.error);
+//     console.log(res.raw_body);
+// });
