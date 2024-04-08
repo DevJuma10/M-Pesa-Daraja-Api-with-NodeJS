@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import bodyParser from 'body-parser';
 dotenv.config()
 import createToken from './middlewares/createToken.js';
+// import routes
 
 const app = express();
 const PORT = process.env.PORT
@@ -20,7 +21,8 @@ app.get('/',  (req,res)=>{
     res.send('Safaricom Daraja Api Tinkering ')
 })
 
-
+// Mount the router at '/api'
+app.use('/api', authRouter);
 
 // Start the server
 app.listen(PORT, () => {
