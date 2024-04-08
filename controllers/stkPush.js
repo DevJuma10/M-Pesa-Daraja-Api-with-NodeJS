@@ -1,7 +1,6 @@
 import unirest from 'unirest'
 
 const stkPush_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'
-const { phone, amount} = req.body;
 const passKey = process.env.MPESA_PASSKEY
 const shortCode = process.env.MPESA_SHORTCODE
 
@@ -22,8 +21,12 @@ const timeStamp =
 const password = new Buffer.from(shortCode+passKey+timeStamp).toString('base64')
 
 
+//GET TOKEN FROM HEADER
+
+
 
 const postStk = async (req, res) => {
+    const { phone, amount} = req.body;
     unirest('POST', stkPush_url)
     .headers({
     'Content-Type': 'application/json',
@@ -38,7 +41,7 @@ const postStk = async (req, res) => {
     "PartyA": phone,
     "PartyB": shortCode,
     "PhoneNumber": phone,
-    "CallBackURL": "https://mydomain.com/path",
+    "CallBackURL": "https://f6b5-102-0-8-140.ngrok-free.app/",
     "AccountReference": "business legit",
     "TransactionDesc": "Purchase of goods" 
   }))
