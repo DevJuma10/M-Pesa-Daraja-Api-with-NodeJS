@@ -6,7 +6,6 @@ dotenv.config()
 const stkPush_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'
 const passKey = process.env.MPESA_PASSKEY
 const shortCode = process.env.MPESA_SHORTCODE
-console.log(`======${shortCode}=======>>=`)
 
 const date = new Date();
 const timeStamp =
@@ -50,7 +49,7 @@ const postStk = async (req, res) => {
     "PartyB": shortCode,
     "PhoneNumber": phone,
     "CallBackURL": "https://f6b5-102-0-8-140.ngrok-free.app/",
-    "AccountReference": "Business DeadlyDeadly",
+    "AccountReference": "SEND MASIDIS C180 MONEY TO YOUR BOY",
     "TransactionDesc": "Purchase of goods" 
   }))
 .end(res => {
