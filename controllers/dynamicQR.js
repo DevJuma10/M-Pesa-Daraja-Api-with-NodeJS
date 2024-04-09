@@ -15,7 +15,6 @@ const dynamicQR = async (req, res ) => {
     // Get Token from header
     let token =  await req.token
     const  { amount }  = req.body;
-    console.log(`==================${amount}====================`)
 
     await unirest ('POST', qr_url)
             .headers({
