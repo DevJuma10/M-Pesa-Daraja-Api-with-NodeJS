@@ -36,13 +36,17 @@ const postStk = async (req, res) => {
     "AccountReference": "Pay RelyOn Ltd",
     "TransactionDesc": "Purchase of goods" 
   }))
-.end(res => {
-    if (res.error) {
-        console.error(res.error);
-        console.log(res.body); // Log response body
-        throw new Error(res.error);
+.end(response => {
+    if (response.error) {
+        console.error(response.error);
+        console.log(response.body); // Log response body
+        throw new Error(response.error);
     }
-    console.log(res.body); // Log successful response body
+    // Log successful response body
+    res.status(200).json({
+        message : 'success',
+        data : response.body
+    })
 });
 }
 
