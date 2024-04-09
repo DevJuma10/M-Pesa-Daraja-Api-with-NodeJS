@@ -1,5 +1,5 @@
 import unirest from 'unirest'
-import passwordGenerator from './utils/passwordGenerator.js'
+import passwordGenerator from '../utils/passwordGenerator.js'
 import dotenv from  'dotenv'
 dotenv.config()
 

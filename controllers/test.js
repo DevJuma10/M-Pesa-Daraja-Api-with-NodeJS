@@ -1,4 +1,3 @@
-import passwordGenerator from "./utils/passwordGenerator.js"
 
 const routeTest =  (req,res) => {
     let message =  "Route Works !!"

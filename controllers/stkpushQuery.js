@@ -1,7 +1,7 @@
 import unirest from "unirest";
 import dotenv from 'dotenv';
 dotenv.config();
-import passwordGenerator from "./utils/passwordGenerator.js";
+import passwordGenerator from "../utils/passwordGenerator.js";
 
 const query_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query';
 
