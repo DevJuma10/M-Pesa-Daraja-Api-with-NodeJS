@@ -31,7 +31,7 @@ await unirest('POST', status_url)
                 "Occassion": "OK",
               }))
             .end(response => {
-                console.log(response.body)
+                
                 if (response.error) {
                     console.error(response.error);
     

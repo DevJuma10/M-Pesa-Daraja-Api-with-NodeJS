@@ -5,6 +5,7 @@ import dynamicQR from '../controllers/dynamicQR.js'
 import routeTest from '../controllers/test.js'
 import business2customer from '../controllers/business2customer.js'
 import checkTransactionStatus from '../controllers/transactionStatus.js'
+import checkBalance from '../controllers/checkBalance.js'
 
 
 const router = express.Router()
@@ -15,6 +16,7 @@ router.post('/stkpushquery', stkPushQuery)
 router.post('/dynamicQR', dynamicQR)
 router.post('/b2c', business2customer)
 router.post('/checkTransactionStatus', checkTransactionStatus)
+router.post('check-balance', checkBalance)
 
 export default router;
 
